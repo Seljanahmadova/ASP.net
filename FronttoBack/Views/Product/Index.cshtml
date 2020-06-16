@@ -1,0 +1,27 @@
+﻿@model IEnumerable<ProductVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="product-list-title">
+        <div class="container py-4">
+            <div class="row py-5">
+                <div class="col-12"> 
+                    <h1>Product List</h1>
+                    <i class="text-muted">Where flowers are our inspiration</i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="product-list">
+        <div class="container">
+            <div class="row mainList">
+                <partial name="_ProductPartialView"/>
+            </div>
+            <div class="row justify-content-center">
+                <button class="btn btn-success" id="loadMore">Load More</button>
+            </div>
+        </div>
+    </section>
+</main>
