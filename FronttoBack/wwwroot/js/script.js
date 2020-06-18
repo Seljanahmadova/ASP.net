@@ -1,10 +1,21 @@
 $(document).ready(function () {
+    $(window).bind('scroll', function () {
+        if ($(window).scrollTop() >= $('.mainList').offset().top + $('.mainList').outerHeight() - window.innerHeight) {
+            console.log('end reached');
+        }
+    });
+    let skip = 8;
+    let productCount = $("#productCount").val();
     $("#loadMore").click(function () {
         $.ajax({
-            url: "/Product/Load",
+            url: "/Product/Load?skip="+skip,
             type: "Get",
             success: function (response) {
                 $(".mainList").append(response);
+                skip += 8;
+                if (skip >= productCount) {
+                    $("#loadMore").remove();
+                }
                 //old version
                 //for (var product of response) {
                 //    let mainDiv = $("<div>").addClass("col-sm-6 col-md-4 col-lg-3 mt-3");

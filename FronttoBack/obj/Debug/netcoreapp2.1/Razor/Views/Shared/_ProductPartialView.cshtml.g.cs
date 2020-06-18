@@ -74,7 +74,7 @@ using FronttoBack.ViewModels;
             WriteLiteral("\">\r\n            <div class=\"img\">\r\n                <a href=\"\">\r\n                    ");
             EndContext();
             BeginContext(297, 57, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a0921d5eb6fc43f69f3558f3be934c92", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "deec186b3e344c578336175fd94b9a96", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

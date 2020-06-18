@@ -17,7 +17,7 @@ namespace FronttoBack.Controllers
         }
         public IActionResult Index()
         {
-
+            ViewBag.ProductCount = _db.Products.Count();
             return View(_db.Products.Select(p=> new ProductVM { 
             Id=p.Id,
             Title=p.Title,
